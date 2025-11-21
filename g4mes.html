@@ -122,3 +122,39 @@ button:hover {
     background: rgba(255,255,255,0.15);
 }
 </style>
+
+    <button onclick="openProxy()" style="
+    padding: 18px 40px;
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    border-radius: 10px;
+">
+    TEXTLABELHERE
+</button>
+
+<script>
+function openProxy() {
+    let win = window.open("about:blank", "_blank");
+    win.document.write(`
+        <html>
+            <head>
+                <title>Learn COding, and more with Google.</title>
+            </head>
+            <body style="margin:0; overflow:hidden;">
+                <iframe src="https://db.login-live.blogbott.com/html/kart_bros/index.html" style="width:100vw; height:100vh; border:none;"></iframe>
+            </body>
+        </html>
+    `);
+}
+</script>
+
+<style>
+button:hover {
+    transform: scale(1.12);
+    background: rgba(255,255,255,0.15);
+}
+</style>
