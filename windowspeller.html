@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Speller - 🟩Project Lime Starburst🟩</title>
+    <link rel="icon" type="image/png" href="Nobg-Lime-Starburst.png">
+</head>
+<body style="background:#7fbf3f; color:white; text-align:center; padding-top:100px; font-family:Arial;">
+
+
+    <!-- top-left logo -->
+    <a href="index.html" style="position:absolute; top:15px; left:15px;">
+        <img src="Nobg-Lime-Starburst.png" 
+            alt="Home" 
+            style="width:85px; height:auto; cursor:pointer;">
+    </a>
+
+    <h1 style="font-size:40px;">Window Speller</h1>
+
+    <button 
+        onclick="spellHi()"
+        style="padding:15px 30px; font-size:20px; cursor:pointer; border-radius:10px; margin-top:20px;">
+        Spell Hi
+    </button>
+
+    <script>
+// store all opened windows
+let spawnedWindows = [];
+
+// Open a blank popup window at a defined position with black background
+function spawnWin(x, y) {
+    let w = window.open("about:blank", "_blank",
+        "width=160,height=120,left=" + x + ",top=" + y);
+
+    // Give the popup a black background
+    w.document.write(`
+        <body style="background:black; margin:0;"></body>
+    `);
+
+    // keep track of it
+    spawnedWindows.push(w);
+}
+
+// Close all opened popup windows
+function closeAll() {
+    spawnedWindows.forEach(w => {
+        if (!w.closed) w.close();
+    });
+    spawnedWindows = []; // clear the list
+}
+
+// Spell "HI" using popup windows
+function spellHi() {
+    let startX = 200;    // Starting X for "H"
+    let startY = 200;    // Starting Y for both letters
+    let letterGap = 650; // Distance between H and I
+
+    // ===== H =====
+    // Left column
+    spawnWin(startX, startY);
+    spawnWin(startX, startY + 150);
+    spawnWin(startX, startY + 300);
+
+    // Middle connector
+    spawnWin(startX + 170, startY + 150);
+
+    // Right column
+    spawnWin(startX + 340, startY);
+    spawnWin(startX + 340, startY + 150);
+    spawnWin(startX + 340, startY + 300);
+
+    // ===== I =====
+    let ix = startX + letterGap;
+
+    spawnWin(ix, startY);
+    spawnWin(ix, startY + 150);
+    spawnWin(ix, startY + 300);
+}
+</script>
+
+<script>
+// Open a blank popup window at a defined position with black background
+function spawnWin(x, y) {
+    let w = window.open("about:blank", "_blank",
+        "width=160,height=120,left=" + x + ",top=" + y);
+
+    // Give the popup a black background
+    w.document.write(`
+        <body style="background:black; margin:0;"></body>
+    `);
+}
+
+// Spell "HI" using popup windows
+function spellHi() {
+    let startX = 200;    // Starting X for "H"
+    let startY = 200;    // Starting Y for both letters
+    let letterGap = 650; // Distance between H and I
+
+    // ===== H =====
+    // Left column
+    spawnWin(startX, startY);
+    spawnWin(startX, startY + 150);
+    spawnWin(startX, startY + 300);
+
+    // Middle connector
+    spawnWin(startX + 170, startY + 150);
+
+    // Right column
+    spawnWin(startX + 340, startY);
+    spawnWin(startX + 340, startY + 150);
+    spawnWin(startX + 340, startY + 300);
+
+    // ===== I =====
+    let ix = startX + letterGap;
+
+    spawnWin(ix, startY);         // top
+    spawnWin(ix, startY + 150);   // middle
+    spawnWin(ix, startY + 300);   // bottom
+}
+</script>
+<script>
+// store all opened windows
+let spawnedWindows = [];
+
+// Open a blank popup window at a defined position with black background
+function spawnWin(x, y) {
+    let w = window.open("about:blank", "_blank",
+        "width=160,height=120,left=" + x + ",top=" + y);
+
+    // Give the popup a black background
+    w.document.write(`
+        <body style="background:black; margin:0;"></body>
+    `);
+
+    // keep track of it
+    spawnedWindows.push(w);
+}
+
+// Close all opened popup windows
+function closeAll() {
+    spawnedWindows.forEach(w => {
+        if (!w.closed) w.close();
+    });
+    spawnedWindows = []; // clear the list
+}
+
+// Spell "HI" using popup windows
+function spellHi() {
+    let startX = 200;    // Starting X for "H"
+    let startY = 200;    // Starting Y for both letters
+    let letterGap = 650; // Distance between H and I
+
+    // ===== H =====
+    // Left column
+    spawnWin(startX, startY);
+    spawnWin(startX, startY + 150);
+    spawnWin(startX, startY + 300);
+
+    // Middle connector
+    spawnWin(startX + 170, startY + 150);
+
+    // Right column
+    spawnWin(startX + 340, startY);
+    spawnWin(startX + 340, startY + 150);
+    spawnWin(startX + 340, startY + 300);
+
+    // ===== I =====
+    let ix = startX + letterGap;
+
+    spawnWin(ix, startY);
+    spawnWin(ix, startY + 150);
+    spawnWin(ix, startY + 300);
+}
+
+<button onclick="window.location.href='YouDontKnowWhoIAm.html'" 
+style="margin-top:60px; padding:10px 20px; font-size:16px;">
+    You Don’t Know Who I Am
+</button>
+
+
+</body>
+</html>
